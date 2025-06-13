@@ -1,5 +1,35 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@custom-variant dark (&:where(.dark, .dark *));
 
 html {
   scroll-behavior: smooth;
+}
+@theme {
+  --color-primary: #166534;
+  --color-background: #ffffff;
+    --color-navbar: #f8fafc; 
+  --color-text: #0f172a;
+  --btn-bg: #e5e7eb; /* gray-200 */
+  --btn-text: #000000; /* black */
+  --card-bg: #ffffff;
+  --card-hover: #e2e8f0;
+   --card-muted: #475569;
+   --link-color: #2563eb; /* blue-600 */
+   --shadow-default: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 14px rgba(0, 0, 0, 0.2);/* shadow for hover effects */
+}
+
+.dark {
+  --color-primary: #4ade80;
+  --color-background: #0f172a;
+  --color-navbar: #1e293b;
+  --color-text: #f1f5f9;
+  --btn-bg: #374151;  /* gray-700 */
+  --btn-text: #ffffff; /* white */
+  --card-bg: #1e293b;
+  --card-hover: #334155;
+  --card-muted: #cbd5e1;
+  --link-color: #93c5fd; /* blue-300 */
+    --shadow-default: 0 1px 3px rgba(255, 255, 255, 0.05);
+  --shadow-hover: 0 4px 14px rgba(255, 255, 255, 0.1);
 }

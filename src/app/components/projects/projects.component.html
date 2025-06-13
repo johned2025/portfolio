@@ -4,31 +4,25 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     
     <!-- Project Card 1 -->
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">Project One</h3>
-      <p class="text-gray-600 text-sm mb-4">
-        A short description of project one goes here.
-      </p>
-      <a href="#" class="text-blue-600 hover:underline text-sm">View Project →</a>
-    </div>
+    <div
+      class="p-6 rounded-xl  shadow hover:shadow-xl transition"
+      style="
+        background-color: var(--card-bg);
+        color: var(--card-text);
+        box-shadow: var(--shadow-default);
+      "
+      onmouseover="this.style.boxShadow='var(--shadow-hover)'"
+      onmouseout="this.style.boxShadow='var(--shadow-default)'"
+      >
+  <h3 class="text-xl font-bold mb-2">Project One</h3>
+  <p class="text-sm mb-4" style="color: var(--card-muted);">
+    A short description of project one goes here.
+  </p>
+  <a href="#" class="hover:underline text-sm" style="color: var(--link-color);">
+    View Project →
+  </a>
+</div>
 
-    <!-- Project Card 2 -->
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">Project Two</h3>
-      <p class="text-gray-600 text-sm mb-4">
-        A short description of project two goes here.
-      </p>
-      <a href="#" class="text-blue-600 hover:underline text-sm">View Project →</a>
-    </div>
-
-    <!-- Project Card 3 -->
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-xl transition">
-      <h3 class="text-xl font-bold mb-2">Project Three</h3>
-      <p class="text-gray-600 text-sm mb-4">
-        A short description of project three goes here.
-      </p>
-      <a href="#" class="text-blue-600 hover:underline text-sm">View Project →</a>
-    </div>
 
   </div>
 </section>

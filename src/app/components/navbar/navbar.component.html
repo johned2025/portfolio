@@ -1,11 +1,23 @@
-<nav class="fixed top-0 w-full bg-white shadow z-50">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between">
+
+<nav class="fixed top-0 w-full text-text shadow z-50" 
+      style="background-color: var(--color-navbar);">
+
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
     <span class="font-bold text-xl">My Portfolio</span>
     <div class="space-x-4">
       <a href="#profile" class="hover:underline">Profile</a>
       <a href="#projects" class="hover:underline">Projects</a>
       <a href="#technologies" class="hover:underline">Technologies</a>
     </div>
+    
+    <button (click)="toggleDarkMode()" class="ml-4 px-3 py-1 rounded"
+       style="background-color: var(--btn-bg); color: var(--btn-text);">
+      {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+    </button>
   </div>
 </nav>
+
+
+
+
 
