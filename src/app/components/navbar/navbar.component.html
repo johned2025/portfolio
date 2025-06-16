@@ -1,29 +1,42 @@
-
 <nav class="fixed top-0 w-full text-text shadow z-50" 
-      style="background-color: var(--color-navbar);">
+     style="background-color: var(--color-navbar);">
 
-  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+  <!-- ✅ Added relative here so the dropdown positions correctly -->
+  <div class="relative max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
     <span class="font-bold text-xl">My Portfolio</span>
-     <button class="sm:hidden text-xl" (click)="toggleMenu()">
+
+    <!-- ☰ burger button -->
+    <button class="sm:hidden text-xl" (click)="toggleMenu()">
       ☰
     </button>
-    <div class="hidden sm:flex space-x-4"
-      [ngClass]="{ 'block': isMenuOpen, 'hidden': !isMenuOpen && screenIsSmall }">
+
+    <!-- Desktop links -->
+    <div class="hidden sm:flex space-x-4 items-center">
       <a href="#profile" class="hover:underline">Profile</a>
       <a href="#projects" class="hover:underline">Projects</a>
       <a href="#technologies" class="hover:underline">Technologies</a>
-    
+
       <button (click)="toggleDarkMode()" class="ml-4 px-3 py-1 rounded"
         style="background-color: var(--btn-bg); color: var(--btn-text);">
         {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
-    </button>
+      </button>
     </div>
-    
-    
+
+    <!-- Mobile dropdown positioned absolutely just below -->
+    <div
+      class="sm:hidden absolute right-0 top-full px-4 py-4 rounded shadow-md z-50"
+      style="background-color: var(--color-navbar);"
+      [ngClass]="{ 'block': isMenuOpen, 'hidden': !isMenuOpen }">
+
+      <!-- Mobile links -->
+      <a href="#profile" class="block py-1 hover:underline">Profile</a>
+      <a href="#projects" class="block py-1 hover:underline">Projects</a>
+      <a href="#technologies" class="block py-1 hover:underline">Technologies</a>
+
+      <button (click)="toggleDarkMode()" class="mt-2 w-full px-3 py-1 rounded text-left"
+        style="background-color: var(--btn-bg); color: var(--btn-text);">
+        {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+      </button>
+    </div>
   </div>
 </nav>
-
-
-
-
-
