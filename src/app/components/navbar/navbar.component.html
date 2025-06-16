@@ -4,16 +4,22 @@
 
   <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
     <span class="font-bold text-xl">My Portfolio</span>
-    <div class="space-x-4">
+     <button class="sm:hidden text-xl" (click)="toggleMenu()">
+      ☰
+    </button>
+    <div class="hidden sm:flex space-x-4"
+      [ngClass]="{ 'block': isMenuOpen, 'hidden': !isMenuOpen && screenIsSmall }">
       <a href="#profile" class="hover:underline">Profile</a>
       <a href="#projects" class="hover:underline">Projects</a>
       <a href="#technologies" class="hover:underline">Technologies</a>
+    
+      <button (click)="toggleDarkMode()" class="ml-4 px-3 py-1 rounded"
+        style="background-color: var(--btn-bg); color: var(--btn-text);">
+        {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+    </button>
     </div>
     
-    <button (click)="toggleDarkMode()" class="ml-4 px-3 py-1 rounded"
-       style="background-color: var(--btn-bg); color: var(--btn-text);">
-      {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
-    </button>
+    
   </div>
 </nav>
 
