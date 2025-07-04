@@ -4,7 +4,7 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     
     <!-- Project Card 1 -->
-    <div
+    <div (click)="openModal('videos/budgetTracker.mp4')"
         class="p-6 rounded-xl  shadow hover:shadow-xl transition"
         style="
           background-color: var(--card-bg);
@@ -23,13 +23,12 @@
     </a>
   </div>
     <!-- Project Card 2 -->
-    <div
+    <div (click)="openModal('videos/movieMate.mp4')"
         class="p-6 rounded-xl  shadow hover:shadow-xl transition"
         style="
           background-color: var(--card-bg);
           color: var(--card-text);
-          box-shadow: var(--shadow-default);
-        "
+          box-shadow: var(--shadow-default);"
         onmouseover="this.style.boxShadow='var(--shadow-hover)'"
         onmouseout="this.style.boxShadow='var(--shadow-default)'"
         >
@@ -81,5 +80,23 @@
     </div>
 
   </div>
+  <!-- Modal Overlay -->
+<div *ngIf="showModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center">
+  <div class="bg-white rounded-xl shadow-xl max-w-2xl w-full p-4 relative">
+    
+    <!-- Close button -->
+    <button (click)="closeModal()"
+            class="absolute top-2 right-2 text-gray-700 hover:text-red-600 text-xl font-bold">
+      &times;
+    </button>
+
+    <!-- Video preview -->
+    <video controls autoplay muted class="w-full rounded-lg">
+      <source [src]="selectedVideoUrl" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
 </section>
 
