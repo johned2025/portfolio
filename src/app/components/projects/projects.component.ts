@@ -7,16 +7,18 @@ import { CommonModule } from '@angular/common';
   styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
-  showModal = false;
-  selectedVideoUrl = '';
+   showModal = false;
+  selectedMediaUrl = '';
+  isImage = false;
 
-  openModal(videoUrl: string): void {
-    this.selectedVideoUrl = videoUrl;
+  openModal(mediaUrl: string, type: 'image' | 'video'): void {
+    this.selectedMediaUrl = mediaUrl;
+    this.isImage = type === 'image';
     this.showModal = true;
   }
 
   closeModal(): void {
     this.showModal = false;
-    this.selectedVideoUrl = '';
+    this.selectedMediaUrl = '';
   }
 }
