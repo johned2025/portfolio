@@ -13,47 +13,6 @@
         [mediaType]="project.mediaType"
         (openModal)="openModal($event.path, $event.type)">
     </app-project-card>
-    <!-- Project Card 2 -->
-    
-    <!-- Project Card 3 -->
-    <div (click)="openModal('images/IEEEpj.JPG', 'image')"
-        class="p-6 rounded-xl  shadow hover:shadow-xl transition cursor-pointer"
-        style="
-          background-color: var(--card-bg);
-          color: var(--card-text);
-          box-shadow: var(--shadow-default);
-        "
-        onmouseover="this.style.boxShadow='var(--shadow-hover)'"
-        onmouseout="this.style.boxShadow='var(--shadow-default)'"
-        >
-      <h3 class="text-xl font-bold mb-2"> IEEE Student Branch Website (WordPress)</h3>
-      <p class="text-sm mb-4" style="color: var(--card-muted);">
-        Co-developed and maintained a public-facing website for a student group using WordPress, managing content, layout, and plugin integration.
-      </p>
-      <a href="https://studentbranches.ieee.org/ca-oc/" target="_blank" class="hover:underline text-sm" style="color: var(--link-color);">
-        View Project →
-      </a>
-      </div>
-    <!-- Project Card 4 -->
-    <div (click)="openModal('videos/fitnessApp.webm', 'video')"
-        class="p-6 rounded-xl  shadow hover:shadow-xl transition cursor-pointer"
-        style="
-          background-color: var(--card-bg);
-          color: var(--card-text);
-          box-shadow: var(--shadow-default);
-        "
-        onmouseover="this.style.boxShadow='var(--shadow-hover)'"
-        onmouseout="this.style.boxShadow='var(--shadow-default)'"
-        >
-      <h3 class="text-xl font-bold mb-2">Angular Fitness Tracker App </h3>
-      <p class="text-sm mb-4" style="color: var(--card-muted);">
-        A personal health and fitness tracking application built with Angular, featuring goal setting, workout logs, and activity history (details coming soon).
-      </p>
-      <a href="https://github.com/johned2025/FitnessApp" target="_blank" class="hover:underline text-sm" style="color: var(--link-color);">
-        View Project →
-      </a>
-    </div>
-
   </div>
   <!-- Modal Overlay -->
 <div *ngIf="showModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center"
