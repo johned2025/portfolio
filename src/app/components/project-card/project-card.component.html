@@ -1,0 +1,28 @@
+<div
+  (click)="handleClick()"
+  class="p-6 rounded-xl shadow hover:shadow-xl transition cursor-pointer"
+  style="
+    background-color: var(--card-bg);
+    color: var(--card-text);
+    box-shadow: var(--shadow-default);"
+  (mouseover)="onMouseOver($event)"
+  (mouseout)="onMouseOut($event)"
+>
+  <h3 class="text-xl font-bold mb-2">{{ title }}</h3>
+
+  <p class="text-sm mb-4" style="color: var(--card-muted);">
+    {{ description }}
+  </p>
+
+  <a
+    *ngIf="repoLink"
+    [href]="repoLink"
+    target="_blank"
+    class="hover:underline text-sm"
+    style="color: var(--link-color);"
+    (click)="$event.stopPropagation()" 
+  >
+    View Project →
+  </a>
+</div>
+
