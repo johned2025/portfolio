@@ -11,7 +11,8 @@ export class ProjectCardComponent {
   @Input() description!: string;
   @Input() repoLink?: string;
   @Input() mediaPath?: string;   
-  @Input() mediaType?: 'video' | 'image'; 
+  @Input() mediaType?: 'video' | 'image';
+  @Input() stack?: string;
 
   @Output() openModal = new EventEmitter<{ path: string, type: 'video'|'image' }>();
   
