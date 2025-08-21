@@ -5,6 +5,7 @@ html {
   scroll-behavior: smooth;
 }
 @theme {
+  --stack-text: #2563eb;
   --color-primary: #166534;
   --color-background: #ffffff;
     --color-navbar: #f8fafc; 
@@ -20,6 +21,7 @@ html {
 }
 
 .dark {
+  --stack-text: #cbd5e1;
   --color-primary: #4ade80;
   --color-background: #0f172a;
   --color-navbar: #1e293b;

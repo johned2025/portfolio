@@ -17,28 +17,32 @@ export class ProjectsComponent {
       description: 'A secure, customizable web app to help users manage expenses, visualize spending trends, and gain financial insight.',
       repoLink: 'https://github.com/johned2025/BudgetTracker',
       mediaPath: 'videos/budgetTracker.mp4',
-      mediaType: 'video' as 'video'
+      mediaType: 'video' as 'video',
+      stack:'JavaScript, HTML, CSS, PHP, MySQL'
     },
     {
       title: 'MovieMate - Movie Recommendation Web App',
       description: 'A movie manager that allows users to track their favorite movies and explore trending titles.',
       repoLink: 'https://github.com/johned2025/Movie-Mate',
       mediaPath: 'videos/movieMate.mp4',
-      mediaType: 'video' as 'video'
+      mediaType: 'video' as 'video',
+      stack:'JavaScript, HTML, CSS, Java(JSP + Servlets), MySQL'
     },
     {
       title: 'IEEE Student Branch Website (WordPress)',
       description: 'Co-developed and maintained a public-facing website for a student group using WordPress, managing content, layout, and plugin integration.',
       repoLink: 'https://studentbranches.ieee.org/ca-oc/',
       mediaPath: 'images/IEEEpj.JPG',
-      mediaType: 'image' as 'image'
+      mediaType: 'image' as 'image',
+      stack: 'WordPress, CSS'
     },
     {
       title: 'Angular Fitness Tracker App',
       description: 'A personal health and fitness tracking application built with Angular, featuring goal setting, workout logs, and activity history (details coming soon).',
       repoLink: 'https://github.com/johned2025/FitnessApp',
       mediaPath: 'videos/fitnessApp.webm',
-      mediaType: 'video' as 'video'
+      mediaType: 'video' as 'video',
+      stack: 'Angular, TypeScript, HTML, CSS'
     }
   ];
 
