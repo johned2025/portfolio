@@ -15,13 +15,50 @@
       <a href="#profile" class="hover:underline">Profile</a>
       <a href="#projects" class="hover:underline">Projects</a>
       <a href="#technologies" class="hover:underline">Technologies</a>
+      <div class="flex space-x-2 ml-4">
+        <!-- CV Button with SVG icon -->
+        <a href="/files/cv.pdf" target="_blank"
+          class="px-3 py-1 rounded flex items-center"
+          style="background-color: var(--btn-bg); color: var(--btn-text);">
+          <svg class="w-6 h-6 " fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.828A2 2 0 0 0 19.414 7.414l-4.828-4.828A2 2 0 0 0 12.172 2H6zm6 1.414L18.586 10H13a1 1 0 0 1-1-1V3.414z"/>
+            <text x="50%" y="70%" text-anchor="middle" font-size="8" font-weight="bold" fill="var(--btn-bg)">CV</text>
+          </svg>
 
-      <button (click)="toggleDarkMode()" class="ml-4 px-3 py-1 rounded"
-        style="background-color: var(--btn-bg); color: var(--btn-text);">
-        {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
-      </button>
+        </a>
+
+        <!-- Dark Mode Toggle Button with SVG icon -->
+        <button (click)="toggleDarkMode()" class=" px-3 py-1 rounded flex items-center"
+          style="background-color: var(--btn-bg); color: var(--btn-text);">
+          <svg *ngIf="!isDarkMode" class="w-6 h-6 " fill="none" viewBox="0 0 24 24">
+            <!-- Moon icon -->
+            <path fill="currentColor" d="M21 12.79A9 9 0 0 1 11.21 3a7 7 0 1 0 9.79 9.79z"/>
+          </svg>
+          <svg *ngIf="isDarkMode" class="w-6 h-6" fill="none" viewBox="0 0 24 24">
+            <!-- Sun icon -->
+            <circle cx="12" cy="12" r="5" fill="currentColor"/>
+            <g stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </g>
+          </svg>
+          
+        </button>
+      </div>
     </div>
-
+    <!-- Overlay for closing mobile menu when clicking outside -->
+    <div 
+      *ngIf="isMenuOpen" 
+      class="fixed inset-0 z-40 sm:hidden" 
+      (click)="toggleMenu()"
+      style="background: transparent;">
+    </div>
     <!-- Mobile dropdown positioned absolutely just below -->
     <div
       class="sm:hidden absolute right-0 top-full px-4 py-4 rounded shadow-md z-50"
@@ -33,10 +70,42 @@
       <a href="#projects" class="block py-1 hover:underline">Projects</a>
       <a href="#technologies" class="block py-1 hover:underline">Technologies</a>
 
-      <button (click)="toggleDarkMode()" class="mt-2 w-full px-3 py-1 rounded text-left"
-        style="background-color: var(--btn-bg); color: var(--btn-text);">
-        {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
-      </button>
+      <div class="flex space-x-2 mt-4">
+        <!-- CV Button with SVG icon -->
+        <a href="/files/cv.pdf" target="_blank"
+          class="px-3 py-1 rounded flex items-center"
+          style="background-color: var(--btn-bg); color: var(--btn-text);">
+          <svg class="w-6 h-6 " fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8.828A2 2 0 0 0 19.414 7.414l-4.828-4.828A2 2 0 0 0 12.172 2H6zm6 1.414L18.586 10H13a1 1 0 0 1-1-1V3.414z"/>
+            <text x="50%" y="70%" text-anchor="middle" font-size="8" font-weight="bold" fill="var(--btn-bg)">CV</text>
+          </svg>
+
+        </a>
+
+        <!-- Dark Mode Toggle Button with SVG icon -->
+        <button (click)="toggleDarkMode()" class=" px-3 py-1 rounded flex items-center"
+          style="background-color: var(--btn-bg); color: var(--btn-text);">
+          <svg *ngIf="!isDarkMode" class="w-6 h-6 " fill="none" viewBox="0 0 24 24">
+            <!-- Moon icon -->
+            <path fill="currentColor" d="M21 12.79A9 9 0 0 1 11.21 3a7 7 0 1 0 9.79 9.79z"/>
+          </svg>
+          <svg *ngIf="isDarkMode" class="w-6 h-6" fill="none" viewBox="0 0 24 24">
+            <!-- Sun icon -->
+            <circle cx="12" cy="12" r="5" fill="currentColor"/>
+            <g stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/>
+              <line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </g>
+          </svg>
+          
+        </button>
+      </div>
     </div>
   </div>
 </nav>
