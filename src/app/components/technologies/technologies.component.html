@@ -1,51 +1,19 @@
 <section class="max-w-7xl mx-auto px-4 py-16">
   <h2 class="text-4xl text-center font-semibold mb-12 md:text-5xl md:text-left">Technologies I Use</h2>
   
-  <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-center">
-    <li class="py-4 rounded-lg font-medium transition"
-    style="background-color: var(--card-bg); color: var(--card-text); box-shadow: var(--shadow-default);"
-    onmouseover="this.style.backgroundColor='var(--card-hover)'; this.style.boxShadow='var(--shadow-hover)'"
-    onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.boxShadow='var(--shadow-default)'"
-  >Angular</li>
-  
-    <li class="py-4 rounded-lg font-medium transition"
-    style="background-color: var(--card-bg); color: var(--card-text); box-shadow: var(--shadow-default);"
-    onmouseover="this.style.backgroundColor='var(--card-hover)'; this.style.boxShadow='var(--shadow-hover)'"
-    onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.boxShadow='var(--shadow-default)'"
-  >TypeScript</li>
-  
-    <li class="py-4 rounded-lg font-medium transition"
-    style="background-color: var(--card-bg); color: var(--card-text); box-shadow: var(--shadow-default);"
-    onmouseover="this.style.backgroundColor='var(--card-hover)'; this.style.boxShadow='var(--shadow-hover)'"
-    onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.boxShadow='var(--shadow-default)'"
-  >HTML/CSS</li>
-  
-    <li class="py-4 rounded-lg font-medium transition"
-    style="background-color: var(--card-bg); color: var(--card-text); box-shadow: var(--shadow-default);"
-    onmouseover="this.style.backgroundColor='var(--card-hover)'; this.style.boxShadow='var(--shadow-hover)'"
-    onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.boxShadow='var(--shadow-default)'"
-  >Git & GitHub</li>
-  <li class="py-4 rounded-lg font-medium transition"
-    style="background-color: var(--card-bg); color: var(--card-text); box-shadow: var(--shadow-default);"
-    onmouseover="this.style.backgroundColor='var(--card-hover)'; this.style.boxShadow='var(--shadow-hover)'"
-    onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.boxShadow='var(--shadow-default)'"
-  >SQL</li>
-  <li class="py-4 rounded-lg font-medium transition"
-    style="background-color: var(--card-bg); color: var(--card-text); box-shadow: var(--shadow-default);"
-    onmouseover="this.style.backgroundColor='var(--card-hover)'; this.style.boxShadow='var(--shadow-hover)'"
-    onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.boxShadow='var(--shadow-default)'"
-  >Java</li>
-  
-  <li class="py-4 rounded-lg font-medium transition"
-    style="background-color: var(--card-bg); color: var(--card-text); box-shadow: var(--shadow-default);"
-    onmouseover="this.style.backgroundColor='var(--card-hover)'; this.style.boxShadow='var(--shadow-hover)'"
-    onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.boxShadow='var(--shadow-default)'"
-  >Python</li>
-  <li class="py-4 rounded-lg font-medium transition"
-    style="background-color: var(--card-bg); color: var(--card-text); box-shadow: var(--shadow-default);"
-    onmouseover="this.style.backgroundColor='var(--card-hover)'; this.style.boxShadow='var(--shadow-hover)'"
-    onmouseout="this.style.backgroundColor='var(--card-bg)'; this.style.boxShadow='var(--shadow-default)'"
-  >PHP</li>
+<ul class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 sm:gap-8 md:gap-10 text-center">
+  <li *ngFor="let tech of technologies"
+      class="py-4 rounded-lg font-medium transition transform
+             bg-[var(--card-bg)] text-[var(--card-text)]
+             shadow-[var(--shadow-default)]
+             hover:bg-[var(--card-hover)]
+             hover:shadow-[var(--shadow-hover)]
+             hover:-translate-y-1 hover:scale-105
+             duration-200 flex flex-col items-center gap-2">
     
-  </ul>
+    <i [class]="tech.icon + ' text-4xl'"></i>
+    {{ tech.name }}
+  </li>
+</ul>
+
 </section>

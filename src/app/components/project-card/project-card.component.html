@@ -1,12 +1,12 @@
 <div
   (click)="handleClick()"
-  class="p-6 rounded-xl shadow hover:shadow-xl transition cursor-pointer"
-  style="
-    background-color: var(--card-bg);
-    color: var(--card-text);
-    box-shadow: var(--shadow-default);"
-  (mouseover)="onMouseOver($event)"
-  (mouseout)="onMouseOut($event)"
+  class= "p-6 rounded-xl cursor-pointer
+           bg-[var(--card-bg)] text-[var(--card-text)]
+           shadow-[var(--shadow-default)]
+           hover:bg-[var(--card-hover)]
+           hover:shadow-[var(--shadow-hover)]
+           hover:-translate-y-1 hover:scale-105
+           transform transition duration-200"
 >
   <h3 class="text-xl font-bold mb-2">{{ title }}</h3>
 
