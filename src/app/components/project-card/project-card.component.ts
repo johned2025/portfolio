@@ -10,6 +10,7 @@ export class ProjectCardComponent {
   @Input() title!: string;
   @Input() description!: string;
   @Input() repoLink?: string;
+  @Input() siteLink?: string;
   @Input() mediaPath?: string;   
   @Input() mediaType?: 'video' | 'image';
   @Input() stack?: string;
@@ -21,17 +22,5 @@ export class ProjectCardComponent {
       this.openModal.emit({ path: this.mediaPath, type: this.mediaType });
     }
   }
-  onMouseOver(event: MouseEvent): void {
-    const target = event.currentTarget as HTMLElement | null;
-    if (target) {
-      target.style.boxShadow = 'var(--shadow-hover)';
-    }
-  }
-
-  onMouseOut(event: MouseEvent): void {
-    const target = event.currentTarget as HTMLElement | null;
-    if (target) {
-      target.style.boxShadow = 'var(--shadow-default)';
-    }
-  }
+  
 }

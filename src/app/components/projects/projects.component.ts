@@ -18,7 +18,8 @@ export class ProjectsComponent {
       repoLink: 'https://github.com/johned2025/BudgetTracker',
       mediaPath: 'videos/budgetTracker.mp4',
       mediaType: 'video' as 'video',
-      stack:'JavaScript, HTML, CSS, PHP, MySQL'
+      stack:'JavaScript, HTML, CSS, PHP, MySQL',
+      siteLink:''
     },
     {
       title: 'MovieMate - Movie Recommendation Web App',
@@ -26,12 +27,14 @@ export class ProjectsComponent {
       repoLink: 'https://github.com/johned2025/Movie-Mate',
       mediaPath: 'videos/movieMate.mp4',
       mediaType: 'video' as 'video',
-      stack:'JavaScript, HTML, CSS, Java(JSP + Servlets), MySQL'
+      stack:'JavaScript, HTML, CSS, Java(JSP + Servlets), MySQL',
+      siteLink:''
     },
     {
       title: 'IEEE Student Branch Website (WordPress)',
       description: 'Co-developed and maintained a public-facing website for a student group using WordPress, managing content, layout, and plugin integration.',
-      repoLink: 'https://studentbranches.ieee.org/ca-oc/',
+      siteLink: 'https://studentbranches.ieee.org/ca-oc/',
+      repoLink: 'https://github.com/johned2025/Movie-Mate',
       mediaPath: 'images/IEEEpj.JPG',
       mediaType: 'image' as 'image',
       stack: 'WordPress, CSS'

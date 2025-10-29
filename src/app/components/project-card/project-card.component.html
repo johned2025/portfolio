@@ -1,12 +1,13 @@
 <div
   (click)="handleClick()"
-  class= "p-6 rounded-xl cursor-pointer
-           bg-[var(--card-bg)] text-[var(--card-text)]
-           shadow-[var(--shadow-default)]
-           hover:bg-[var(--card-hover)]
-           hover:shadow-[var(--shadow-hover)]
-           hover:-translate-y-1 hover:scale-105
-           transform transition duration-200"
+  class="p-6 rounded-xl 
+         cursor-[url('/icons/rocket.cur'),_pointer]
+         bg-[var(--card-bg)] text-[var(--card-text)]
+         shadow-[var(--shadow-default)]
+         hover:bg-[var(--card-hover)]
+         hover:shadow-[var(--shadow-hover)]
+         hover:-translate-y-1 hover:scale-105
+         transform transition duration-200"
 >
   <h3 class="text-xl font-bold mb-2">{{ title }}</h3>
 
@@ -14,18 +15,32 @@
     {{ description }} <br>
     <span class="text-[color:var(--stack-text)]" *ngIf="stack">{{ stack }}</span>
   </p>
-
-  <a
-    *ngIf="repoLink"
-    [href]="repoLink"
-    target="_blank"
-    class="hover:text-blue-400"
-    style="color: var(--link-color);"
-    (click)="$event.stopPropagation()" 
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.6-1.5-1.4-1.9-1.4-1.9-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.9 3 1.4 3.7 1.1.1-.8.4-1.4.7-1.7-2.6-.3-5.4-1.3-5.4-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.2 1.8-.3 2.7-.3.9 0 1.9.1 2.7.3 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.8 5.5-5.4 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5Z"/>
-          </svg>
-  </a>
+  <div class="flex space-x-4">
+    <a
+      *ngIf="repoLink"
+      [href]="repoLink"
+      target="_blank"
+      class="hover:text-blue-400 inline-flex"
+      style="color: var(--link-color);"
+      (click)="$event.stopPropagation()" 
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.6-1.5-1.4-1.9-1.4-1.9-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.9 3 1.4 3.7 1.1.1-.8.4-1.4.7-1.7-2.6-.3-5.4-1.3-5.4-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2.9-.2 1.8-.3 2.7-.3.9 0 1.9.1 2.7.3 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.8 5.5-5.4 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.65 18.35.5 12 .5Z"/>
+            </svg>
+    </a>
+    <a
+      *ngIf="siteLink"
+      [href]="siteLink"
+      target="_blank"
+      class="hover:text-blue-400 inline-flex"
+      style="color: var(--link-color);"
+      (click)="$event.stopPropagation()" 
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+      </svg>
+    </a>
+  </div>
 </div>
 

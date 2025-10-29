@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'selector',
+  darkMode: 'class',
   content: [
     "./src/**/*.{html,ts}",
   ],
@@ -19,6 +19,7 @@ module.exports = {
   'hover:bg-[color:var(--card-hover)]',
   'bg-[color:var(--card-bg)]',
   'text-[color:var(--card-text)]',
+  'dark:cursor-play-dark'
 ]
 }
 

@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@custom-variant dark (&:where(.dark, .dark *));
+
 
 html {
   scroll-behavior: smooth;
@@ -35,3 +35,5 @@ html {
     --shadow-default: 0 1px 3px rgba(255, 255, 255, 0.05);
   --shadow-hover: 0 4px 14px rgba(255, 255, 255, 0.1);
 }
+
+
