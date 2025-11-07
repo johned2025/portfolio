@@ -46,6 +46,15 @@ export class ProjectsComponent {
       mediaPath: 'videos/fitnessApp.webm',
       mediaType: 'video' as 'video',
       stack: 'Angular, TypeScript, HTML, CSS'
+    },
+    {
+      title: 'StarterWebs – My freelance services landing page',
+      description: 'Built with React, designed for scalability, and intended as a foundation for small business web solutions. project in progress.',
+      repoLink: '',
+      mediaPath: 'imagess/starterwebs.JPG',
+      mediaType: 'image' as 'image',
+      stack:'React, tailwindCSS' ,
+      siteLink:'https://starterwebs.dev'
     }
   ];
 
