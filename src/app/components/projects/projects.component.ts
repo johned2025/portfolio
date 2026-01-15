@@ -55,6 +55,15 @@ export class ProjectsComponent {
       mediaType: 'image' as 'image',
       stack:'React, tailwindCSS' ,
       siteLink:'https://starterwebs.dev'
+    },
+    {
+      title: 'Reseau – Customer Conversation Platform',
+      description: 'Development-phase customer communication feature for a car dealership app, involving Twilio conversations API,FastAPI backend services, JWT authentication, webhook integration, and frontend–backend wiring.',
+      repoLink: 'https://github.com/varunteja369963/reseau-demo',
+      mediaPath: 'images/reseau.JPG',
+      mediaType: 'image' as 'image',
+      stack:'FastAPI, JWT, Webhooks, Kubernetes, Frontend–Backend Integration' ,
+      siteLink:''
     }
   ];
 

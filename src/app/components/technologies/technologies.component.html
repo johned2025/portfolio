@@ -10,9 +10,14 @@
              hover:shadow-[var(--shadow-hover)]
              hover:-translate-y-1 hover:scale-105
              duration-200 flex flex-col items-center gap-2">
-    
-    <i [class]="tech.icon + ' text-4xl'"></i>
+    <ng-container *ngIf="tech.svg; else iconClass">
+    <img [src]="tech.icon" alt="{{tech.name}} logo" class="h-9 w-9 object-contain"/>
+    </ng-container>
+    <ng-template #iconClass>
+      <i [class]="tech.icon + ' text-4xl'"></i>
+    </ng-template>
     {{ tech.name }}
+    
   </li>
 </ul>
 

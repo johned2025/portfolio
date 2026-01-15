@@ -20,7 +20,9 @@ export class TechnologiesComponent {
     { name: 'Linux', icon: 'devicon-linux-plain colored' },
     { name: 'Git', icon: 'devicon-git-plain colored' },
     { name: 'GitHub', icon: 'devicon-github-plain colored' },
-    { name: 'Java', icon: 'devicon-java-plain colored' }
+    { name: 'Java', icon: 'devicon-java-plain colored' },
+    { name: 'FastAPI', icon: 'devicon-fastapi-plain colored' },
+    { name: 'n8n', icon: '/icons/n8n.svg', svg: true }
   ];
 
 }
