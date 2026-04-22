@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './technologies.component.css'
 })
 export class TechnologiesComponent {
-   technologies = [
+   technologies: { name: string; icon: string; svg?: string }[] = [
     { name: 'Angular', icon: 'devicon-angularjs-plain colored' },
     { name: 'React', icon: 'devicon-react-original colored' },
     { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
@@ -22,7 +22,10 @@ export class TechnologiesComponent {
     { name: 'GitHub', icon: 'devicon-github-plain colored' },
     { name: 'Java', icon: 'devicon-java-plain colored' },
     { name: 'FastAPI', icon: 'devicon-fastapi-plain colored' },
-    { name: 'n8n', icon: '/icons/n8n.svg', svg: true }
+    { name: 'Next.js', icon: 'devicon-nextjs-plain colored' },
+    { name: 'Rust', icon: 'devicon-rust-plain colored' },
+    { name: 'Supabase', icon: 'devicon-supabase-plain colored' }
+    
   ];
 
 }
